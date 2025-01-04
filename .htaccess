@@ -1,0 +1,6 @@
+Options All -Indexes
+
+RewriteEngine On
+
+RewriteRule ^([-a-zA-Z0-9]+)$ index.php?ruta=$1
+RewriteRule ^vistas/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+\.php)$ vistas/$1/$2 [L]

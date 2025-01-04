@@ -21,9 +21,11 @@
             <img src="img/bg.svg">
         </div>
         <div class="login-content">
-            <form method="POST" action="../inicio.php">
+
+            <form method="POST">
                 <img src="img/avatar.svg">
                 <h2 class="title">BIENVENIDO</h2>
+            
                 <!-- AQUI VA EL MENSAJE DE ERROR -->
                     <!-- <div class="alert alert-warning alert-dismissible fade show mb-0" role="alert">
                         <small>mensaje de error</small>
@@ -38,7 +40,7 @@
                     <div class="div">
                         <h5>Usuario</h5>
                         <input id="usuario" type="text"
-                            class="input" name="usuario"
+                            class="input" name="txtUsuario"
                             title="ingrese su nombre de usuario" autocomplete="usuario" value="">
 
 
@@ -51,7 +53,7 @@
                     <div class="div">
                         <h5>Contraseña</h5>
                         <input type="password" id="input" class="input"
-                            name="password" title="ingrese su clave para ingresar" autocomplete="current-password">
+                            name="txtPassword" title="ingrese su clave para ingresar" autocomplete="current-password">
 
 
                     </div>
@@ -64,9 +66,14 @@
                 <div class="text-center">
                     <a class="font-italic isai5" href="">Olvidé mi contraseña</a>
                 </div>
-                <input name="btningresar" class="btn" title="click para ingresar" type="submit"
+                <input name="btnIngresar" class="btn" title="click para ingresar" type="submit"
                     value="INICIAR SESION">
+                <?php
+                    $login = new ControladorUsuarios();
+                    $login -> ctrIngresoUsuario(); 
+                ?>
             </form>
+
         </div>
     </div>
     <script src="js/fontawesome.js"></script>
